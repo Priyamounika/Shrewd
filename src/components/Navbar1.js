@@ -2,24 +2,26 @@
 import React, { useState } from 'react';
 import { GrClose } from "react-icons/gr";
 import { SlMenu } from "react-icons/sl";
+import { IoIosArrowDown} from 'react-icons/io';
+import group from "../components/assets/group 2816.png";
 
 
 const Navbar1 = () => {
     let Links =[
-        {name:"HOME",link:"/"},
-        {name:"SERVICE",link:"/"},
-        {name:"ABOUT",link:"/"},
-        {name:"CONTACT",link:"/"},
+        
+        {name:"Services",link:"/"},
+        {name:"who we are",link:"/"},
+        {name:"Contact",link:"/"},
       ];
       let [open, setOpen] =useState(false);
 
     return (
-        <div className='shadow-md w-full fixed top-0 left-0'>
+        <div className='shadow w-full fixed top-0 left-0'>
            <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
             {/* logo section */}
             <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
                 
-                <span>Inscribe</span>
+                <img src={group} className='w-12 h-12'/>
             </div>
             {/* Menu icon */}
             <div
@@ -29,16 +31,33 @@ const Navbar1 = () => {
             {open ? <GrClose /> : <SlMenu />}
           </div>
             {/* linke items */}
-            <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-490px]'}`}>
-                {
-                    Links.map((link) => (
-                    <li className='md:ml-8 md:my-0 my-7 font-semibold'>
-                        <a href={link.link} className='text-gray-800 hover:text-blue-400 duration-500'>{link.name}</a>
-                    </li>))
-                }
-                <button className='btn bg-blue-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static'>Get Started</button>
-            </ul>
+            <ul
+        className={`gap-4 md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+          open ? 'top-12' : 'top-[-490px]'
+        }`}
+      >
+        {Links.map((link) => (
+          <li className="md:ml-8 md:my-0 my-7 " key={link.name}>
+            <a
+              href={link.link}
+              className=" relative"
+            >
+              {link.name}
+              {link.name === 'Services' && (
+                <div className="absolute -top-[9px] right-[-30px] transform translate-y-1/2 w-6 h-6">
+                  {/* Add your arrow icon here */}
+                  {/* Example using an SVG arrow */}
+                  <IoIosArrowDown size={20} className='hover:rotate-[180deg] transition-all duration-300'/>
+                </div>
+              )}
+              
+            </a>
+          </li>
+        ))}
+        <button className='btn bg-gray-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static'>Get Started</button>
+      </ul>
             {/* button */}
+            
            </div>
         </div>
     );

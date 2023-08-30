@@ -5,7 +5,7 @@ import fam1 from './assets/fam1.png';
 const Hero = () => {
   return (
 //     <
-<div className='bg-white container mx-auto mt-2 px-10'>
+<div className='bg-white container mx-auto mt-20 px-10'>
 
 <div className="gap-2 w-full flex flex-col lg:flex-row xl:flex-row md:flex-col justify-center items-center">
     <div className="w-full lg:w-1/2  flex flex-col justify-center mt-16  text-sm">
