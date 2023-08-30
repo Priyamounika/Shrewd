@@ -16,7 +16,7 @@ import React from 'react'
       const Footers = () => {
         return (
         
-          <div className='bg-[#EDFFFC9C] pb-2 mt-6 container mx-auto px-10'>
+          <div className='bg-[#EDFFFC9C] pb-2 mt-6 container mx-auto'>
           <div className='pb-2 w-full container mx-auto shadow-xl px-8 md:px-10 lg:px-14 xl:px-10 flex flex-col gap-10 items-center md:items-start lg:items-start xl:items-start'><div className='flex mt-4'><img src={group} className='w-10 h-12'/>
           <h1 className='font-bold text-[#000000] text-sm lg:text-2xl p-4 lg:p-1'>Shrewd Business Solutions</h1></div>
             <p className='font-bold text-[#000000] text-sm lg:text-lg items-center md:items-start lg:items-start xl:items-start'>Services</p>
