@@ -8,3 +8,23 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+/* Add this to your Tailwind CSS classes */
+.card-animation-enter {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  .card-animation-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .card-animation-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .card-animation-exit-active {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
