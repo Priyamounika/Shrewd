@@ -11,7 +11,6 @@ import Quote from './components/Quote';
 import Our from './components/Our';
 import Award from './components/Award';
 import What from './components/What';
-import CardContainer from './components/Accordins';
 import Accordins from './components/Accordins';
 
 
@@ -24,7 +23,6 @@ const App = () => {
       <Hero/>
       <Wedo/>
       <Accordins/>
-      <CardContainer/>
       <Success/>
       <Clients/>
       <Our/>
